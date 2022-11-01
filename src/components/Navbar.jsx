@@ -3,21 +3,52 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Navbar = () => {
+  let activeStyle = {
+    color: '#8490ff',
+    borderBottom: "2px solid black",
+  };
+
   return (
     <MainNavBar>
       <div className="menuIcon">
         <ul className="navbar-list">
           <li>
-            <NavLink className="navbar-link" to="/">Home</NavLink>
+            <NavLink
+              className="navbar-link"
+              to="/"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              end
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={{ color: 'red' }} className="navbar-link" to="/about">About</NavLink>
+            <NavLink
+              activeStyle={{ color: "red" }}
+              className="navbar-link"
+              to="/about"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/services">Services</NavLink>
+            <NavLink
+              className="navbar-link"
+              to="/services"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Services
+            </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/contact">Contact</NavLink>
+            <NavLink
+              className="navbar-link"
+              to="/contact"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -30,20 +61,16 @@ const MainNavBar = styled.nav`
     display: flex;
     gap: 4rem;
     .navbar-link {
-        &:link, &:visited {
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1rem;
-            color: ${({theme}) => theme.colors.black};
-            text-transform: uppercase;
-            transition: color 0.3s linear;
-        }
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      color: ${({ theme }) => theme.colors.black};
+      text-transform: uppercase;
+      // transition: color 0.3s linear;
 
-        &:hover, &:active{
-            color: ${({theme}) => theme.colors.helper};
-            text-decoration: underline;   
-        }
-        
+      &:hover {
+        color: ${({ theme }) => theme.colors.helper};
+      }
     }
   }
 `;
