@@ -22,7 +22,7 @@ align-items: center;
 height: 5rem;
 padding: 0 4.8rem;
 .logo{
-    max-width: 30%;
+    max-width: 35%;
     height: auto;
 }
 `;
