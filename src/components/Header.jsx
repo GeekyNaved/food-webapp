@@ -19,7 +19,7 @@ background-color: ${({theme}) => theme.colors.bg};
 display: flex;
 justify-content: space-between;
 align-items: center;
-height: 5rem;
+height: 10rem;
 padding: 0 4.8rem;
 .logo{
     max-width: 35%;

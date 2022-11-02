@@ -24,7 +24,6 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              activeStyle={{ color: "red" }}
               className="navbar-link"
               to="/about"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -63,7 +62,7 @@ const MainNavBar = styled.nav`
     .navbar-link {
       text-decoration: none;
       display: inline-block;
-      font-size: 1rem;
+      font-size: 1.8rem;
       color: ${({ theme }) => theme.colors.black};
       text-transform: uppercase;
       // transition: color 0.3s linear;
