@@ -1,18 +1,37 @@
 // app context - wareHouse
 // provider - AppContext.provider
 // consumer - useContext
-import React, { useContext, useReducer } from "react";
+import axios from "axios";
+import React, { useContext, useEffect, useReducer } from "react";
 import reducer from "./reducer";
 
 const AppContext = React.createContext();
 const initialState = {
   name: "",
   image: "",
+  services: [],
 };
+const API = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  // call api
+  useEffect(() => {
+    getServices(API);
+  }, []);
+
+  // get services from API
+  const getServices = async (url) => {
+    try {
+      const res = await axios.get(url);
+      const data = await res.data;
+    //   console.log(data);
+      dispatch({ type: "GET_SERVICES", payload: data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const updateHomePage = () => {
     return dispatch({
       type: "HOME_UPDATE",
