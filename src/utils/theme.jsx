@@ -6,6 +6,7 @@ export const theme = {
         black: " #212529",
         helper: "#8490ff",
         bg: "rgb(249 249 255)",
+        nav_bg: "rgb(240 240 253)",
         footer_bg: "#0a1435",
         btn: "rgb(98 84 243)",
         border: "rgba(98, 84, 243, 0.5)",

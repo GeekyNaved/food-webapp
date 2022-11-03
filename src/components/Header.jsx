@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-        <img src="./images/logo192.png" className="logo" alt="logo" />
+        <img src="https://www.themealdb.com/images/category/dessert.png" className="logo" alt="logo" />
       </NavLink>
       <Navbar />
     </MainHeader>
@@ -15,7 +15,7 @@ const Header = () => {
 };
 
 const MainHeader = styled.header`
-background-color: ${({theme}) => theme.colors.bg};
+background-color: ${({theme}) => theme.colors.nav_bg};
 display: flex;
 justify-content: space-between;
 align-items: center;

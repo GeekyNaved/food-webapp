@@ -25,8 +25,8 @@ const AppProvider = ({ children }) => {
   const getServices = async (url) => {
     try {
       const res = await axios.get(url);
-      const data = await res.data;
-    //   console.log(data);
+      const data = await res.data.categories;
+      // console.log(data);
       dispatch({ type: "GET_SERVICES", payload: data });
     } catch (error) {
       console.log(error);
