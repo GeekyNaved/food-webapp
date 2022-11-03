@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme";
 import { GlobalStyle } from "./utils/GlobalStyle";
+import Error from "./pages/Error";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>
