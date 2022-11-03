@@ -10,6 +10,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme";
 import { GlobalStyle } from "./utils/GlobalStyle";
 import Error from "./pages/Error";
+import GoToTop from "./components/GoToTop";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <GoToTop />
         <Footer />
       </BrowserRouter>
     </ThemeProvider>
