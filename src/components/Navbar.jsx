@@ -85,7 +85,7 @@ const MainNavBar = styled.nav`
       font-size: 1.8rem;
       color: ${({ theme }) => theme.colors.black};
       text-transform: uppercase;
-      // transition: color 0.3s linear;
+      transition: color 0.3s linear;
 
       &:hover {
         color: ${({ theme }) => theme.colors.helper};
@@ -94,6 +94,7 @@ const MainNavBar = styled.nav`
   }
   .mobile-navbar-btn {
     display: none;
+
     .close-outline {
       display: none;
     }
@@ -114,7 +115,7 @@ const MainNavBar = styled.nav`
     }
     /* hide the original nav menu  */
     .navbar-list {
-      width: 100vw;
+      // width: 100vw;
       height: 100vh;
       position: absolute;
       top: 0;
@@ -154,6 +155,7 @@ const MainNavBar = styled.nav`
       display: inline-block;
     }
     .active .navbar-list {
+      width: 100vw;
       visibility: visible;
       opacity: 1;
       transform: translateX(0);
